@@ -6,12 +6,14 @@ Create them with the EEPROM-Tool.
 
 File naming scheme: 
 ```
-<MANUFACTURER>-<MODEL>_<APPLIANCE-NO>_<NEW/ORG>_<ELECTRONIC>_<DUMPDATE-YYYYMMDD>.txt
+<MANUFACTURER>-<MODEL>_<APPLIANCE-NO>_<NEW/ORG>_<ELECTRONIC-VERSION>_<DUMPDATE-YYYYMMDD>.txt
 ```
 
-<NEW/ORG> - Choose
-NEW: if the machine was never used.
-ORG: when you didn't change anything directly in the EEPROM.
+```<NEW/ORG>``` - Choose
+
+```NEW```: if the machine was never used.
+
+```ORG```: when you didn't change anything directly in the EEPROM.
 
 Example:
 ```
@@ -20,24 +22,34 @@ Jura-F90_ORG_20253_E90MASK6+_20181110.txt
 
 They should have the following structure:
 ```
-# <Manufacturer> <Model> / <NEW/ORG/MOD>
+# <MANUFACTURER> <MODEL> / <NEW/ORG>
 # Typ: <TYP>
 # EAN: <EAN>
 #
 # User: <YOURNAME>
-# Date: <DUMP-DATE YYYY-MM-DD>
+# Date: <DUMPDATE-YYYY-MM-DD>
 #
-# Electronic: <ELECTRONIC VERSION>
-# Serial No.: <SERIAL NO.>
-# Appliance No.: <APPLIANCE NO.>
-# Prod. Date: <DDMMYYY>
-# Elec. Date: <DDMMYYY>
+# Electronic: <ELECTRONIC-VERSION>
+# Serial No.: <SERIAL-NO>
+# Appliance No.: <APPLIANCE-NO>
+# Prod. Date: <PRODUCTION-DATE-DDMMYYY>
+# Elec. Date: <ELECTRONIC-DATE-DDMMYYY>
 
 <ADDR>  <DATA> <DATA> <DATA> <DATA> <DATA> <DATA> <DATA> <DATA> 
 <ADDR>  <DATA> <DATA> <DATA> <DATA> <DATA> <DATA> <DATA> <DATA> 
 ```
 
-Excample:
+```<TYP>``` is on the label under the coffeemaker
+```<EAN>``` is the EAN-code. You can use this page to find it https://www.kaffeevollautomaten.org/kaffeemaschinen/
+
+Use key combinations to find ```<ELECTRONIC-VERSION>, <SERIAL-NO>, <APPLIANCE-NO>, <PRODUCTION-DATE-DDMMYYY>, <ELECTRONIC-DATE-DDMMYYY>```
+
+https://github.com/mjh1709muc/JuraInside/wiki/Key-combinations
+
+Sometimes the ```<APPLIANCE-NO>, <SERIAL-NO>``` are printed on a barcode label.
+
+
+Example:
 
 ```
 # Jura F90 / ORG
